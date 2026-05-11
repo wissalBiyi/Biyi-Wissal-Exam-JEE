@@ -1,4 +1,21 @@
 package ma.biyi.assurance_management.entities;
 
-public class ContratSante {
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import ma.biyi.assurance_management.enums.NiveauCouverture;
+
+@Entity
+@DiscriminatorValue("SANTE")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class ContratSante extends Contrat {
+    @Enumerated(EnumType.STRING)
+    private NiveauCouverture niveauCouverture;
+    private int nbPersonnesCouvertes;
 }
