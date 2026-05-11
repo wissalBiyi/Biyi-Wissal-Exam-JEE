@@ -1,7 +1,7 @@
 package ma.biyi.assurance_management.web;
 
 import ma.biyi.assurance_management.dtos.ClientDTO;
-import ma.biyi.assurance_management.services.AssuranceService;
+import ma.biyi.assurance_management.service.AssuranceService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
